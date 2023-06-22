@@ -52,18 +52,24 @@ def calculate_electrical_acceleration(point, points):
 
 
 def calculate_motion_in_sphere(iterations, r, points):
+    '''
+
+    :param iterations:
+    :param r:
+    :param points:
+    :return: main function which simulates the motion of the electrons in sphere and returns new position of electrons and Percentage Of Electrons in Sphere data for graph
+    '''
     time = 0
     time_graph = np.zeros((iterations, 2))
     for iteration in range(iterations):
         new_points = np.copy(points)
         for i, point in enumerate(points):
-            # print(point)
-            # print(points)
             x, y, z = position_after_tau_time(point, r, points)
             new_points[i, 0] = x
             new_points[i, 1] = y
             new_points[i, 2] = z
         points = new_points
+        # gather data about the percentage of electrons in the sphere after each iteration
         time += tau
         time_graph[iteration, 0] = time
         time_graph[iteration, 1] = find_percentage_of_electrons_in_sphere(points, r)

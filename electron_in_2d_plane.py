@@ -28,6 +28,11 @@ def generate_random_v():
 
 
 def calculate_motion(num_taus):
+    """
+
+    :param num_taus:
+    :return: this is the main function simulates the motion of the electrons and then shows graph
+    """
     x_positions = [0]
     y_positions = [0]
     for i in range(0, num_taus):

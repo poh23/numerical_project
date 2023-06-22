@@ -37,6 +37,13 @@ def position_after_tau_time(point, r, points):
     return new_x, new_y
 
 def calculate_motion_in_square(iterations, r, points):
+    '''
+
+    :param iterations:
+    :param r:
+    :param points:
+    :return: main function which simulate the electrons motion in square
+    '''
     for iteration in range(iterations):
         new_points = np.copy(points)
         for i, point in enumerate(points):
