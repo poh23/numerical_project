@@ -1,3 +1,4 @@
+# by Maya Sprinzak and Refaella Narinsky
 import electrons_in_conductive_sphere
 import electron_in_2d_plane
 import electrons_in_conductive_disc
